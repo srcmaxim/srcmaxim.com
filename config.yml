@@ -21,4 +21,4 @@ params:
   description: "blog about Java, AWS, Quarkus, GraalVM and DynamoDB"
 
 disqusShortname: srcmaxim-com
-googleAnalytics: 208884731
+googleAnalytics: UA-208884731-1

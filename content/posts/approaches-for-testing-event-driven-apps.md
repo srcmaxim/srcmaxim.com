@@ -43,7 +43,7 @@ They protect downstream data consumers from malformed data, as only valid data w
 Here is an example of `User` schema: `user.avsc`.
 ```json
 {
-  "namespace": "io.srcmaxim.events",
+  "namespace": "com.srcmaxim.events",
   "type": "record",
   "name": "User",
   "fields": [
@@ -66,7 +66,7 @@ It will create the following class:
 @AvroGenerated
 public class User extends SpecificRecordBase implements SpecificRecord {
     private static final long serialVersionUID = -8701450327227285572L;
-    public static final Schema SCHEMA$ = (new Parser()).parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"io.srcmaxim.events\",\"fields\":[{\"name\":\"name\",\"type\":\"string\",\"avro.java.string\":\"String\"},{\"name\":\"age\",\"type\":\"int\"}]}");
+    public static final Schema SCHEMA$ = (new Parser()).parse("{\"type\":\"record\",\"name\":\"User\",\"namespace\":\"com.srcmaxim.events\",\"fields\":[{\"name\":\"name\",\"type\":\"string\",\"avro.java.string\":\"String\"},{\"name\":\"age\",\"type\":\"int\"}]}");
     private static SpecificData MODEL$ = new SpecificData();
     private static final BinaryMessageEncoder<User> ENCODER;
     private static final BinaryMessageDecoder<User> DECODER;
@@ -174,7 +174,7 @@ Then for writing tests you need to extend `AbstractIntegrationTest`.
 @ExtendWith(SpringExtension.class)
 class KafkaWorkshopApplicationTests extends AbstractIntegrationTest {
 
-    @Value("${io.srcmaxim.topic.name}")
+    @Value("${com.srcmaxim.topic.name}")
     private String topicName;
 
     @Autowired

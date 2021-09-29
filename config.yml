@@ -11,7 +11,7 @@ markup:
 Menus:
   main:
     - Name: "About"
-      URL: "https://srcmaxim.io/about/"
+      URL: "https://srcmaxim.com/about/"
     - Name: "Github"
       URL: "https://github.com/srcmaxim/"
     - Name: "LinkedIn"
@@ -20,5 +20,5 @@ Menus:
 params:
   description: "blog about Java, AWS, Quarkus, GraalVM and DynamoDB"
 
-disqusShortname: srcmaxim-io
-googleAnalytics: UA-177309644-1
+disqusShortname: srcmaxim-com
+googleAnalytics: 208884731

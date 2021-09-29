@@ -122,7 +122,7 @@ They protect downstream data consumers from malformed data, as only valid data w
 Here is an example of `User` schema: `user.avsc`.
 ```json
 {
-  "namespace": "io.srcmaxim.events",
+  "namespace": "com.srcmaxim.events",
   "type": "record",
   "name": "User",
   "fields": [

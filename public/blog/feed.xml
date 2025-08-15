@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Maksym Koval</title>
+    <id>https://srcmaxim.com</id>
+    <icon>https://srcmaxim.com/favicon.ico</icon>
+    <logo>https://srcmaxim.com/apple-touch-icon.png</logo>
+    <link rel="alternate" href="https://srcmaxim.com"/>
+    <link rel="self" href="https://srcmaxim.com/blog/feed.xml"/>
+    <updated>2025-08-14T12:00:00.000Z</updated>
+    <author>
+        <name>Maksym Koval</name>
+    </author>
+    <entry>
+        <title><![CDATA[Welcome to My Blog]]></title>
+        <link rel="alternate" type="text/html" href="https://srcmaxim.com/blog/2025-08-14-first-post"/>
+        <id>https://srcmaxim.com/blog/2025-08-14-first-post</id>
+        <published>2025-08-14T12:00:00.000Z</published>
+        <updated>2025-08-14T12:00:00.000Z</updated>
+        <summary><![CDATA[In my first post I share why I built my blog using Web Standarts instead of frameworks like Hugo. We will touch on setup, development loop, and deployment with Cloudflare Pages.]]></summary>
+        <media:content url="https://srcmaxim.com/blog/2025-08-14-first-post/image.webp" type="image/webp" medium="image" />
+        <author><name><![CDATA[Maksym Koval]]></name></author>
+        <content type="html"><![CDATA[
+        <p>
+            This is the first post on my website. I made this website to host anything that I want to publish.
+            My number one goal is to write about things that atleast one person somewhere might find useful.
+            Solutions to problems that I have encountered, guides on languages/frameworks or just something cool I want to share.
+        </p>
+        <h3>The website</h3>
+        <p>
+            When designing this site I had to decide which framework to use. My prevous webstite was build using <a href="https://gohugo.io/">Hugo</a>.
+            This is the most popular static site generator, so why not use it?
+        </p>
+        <p>
+            A blog is a very simple website. There are no moving parts or live updates, just simple text and images.
+            You don’t even need to update it that often. So why would you need hundreds of configs to render some simple HTML?
+            I’d rather spend my time writing blog posts.
+        </p>
+        <p>
+            One alternative that really caught my attention was <a href="https://plainvanillaweb.com/">Plain Vanila Web</a>.
+            It’s not a website generator, it’s just a static website, no dependencies needed and build steps.
+            And it’s powered by modern web standarts (such as Web Components).
+        </p>
+        <p>
+            It was really easy to start (I forked Plain Vanila project).
+            For development I use <bold>VS Code</bold> with <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">Live Preview</a> plugin.
+            One thing I immediately noticed was how fast development loop is, you can just open html in <blod>Live Preview and immediately see your changes.
+            The build step is integrated in the browser! For a new post I need to go to <a href="../generator.html">/blog/generator.html</a> and generate new <a href="../feed.xml">RSS Atom feed</a> and <a href="../index.json">Blog index</a>.
+        </blod></p>
+        <h3>Deployment</h3>
+        <p>
+            Since website has no build step it’s really easy to do a deployment.
+            I'm using Cloudflare Pages for hosting. Previously my Hugo blog required build step in Cloudflare Pages.
+            Currently the workflow takes just ten seconds to build AND deploy to the server!
+        </p>
+    ]]></content>
+    </entry>
+</feed>

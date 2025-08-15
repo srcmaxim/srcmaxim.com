@@ -1,0 +1,55 @@
+@import url("../../lib/speed-highlight/themes/github-dark.css");
+
+x-code-viewer {
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+x-code-viewer label, 
+x-code-viewer code {
+    display: block;
+    font-family: var(--font-system-code);
+    font-size: var(--font-system-code-size);
+    white-space: pre;
+    padding: 1em;
+}
+
+x-code-viewer label {
+    flex: 0 0 auto;
+    border-bottom: 1px dotted var(--border-color);
+}
+
+x-code-viewer label:empty {
+    display: none;
+}
+
+x-code-viewer code {
+    position: relative;
+    flex: 1 1 auto;
+    overflow: auto;
+    min-height: 8em;
+}
+
+x-code-viewer.loading code::after {
+    content: '';
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    border-radius: 50%;
+    border-top: 4px solid ghostwhite;
+    border-left: 4px solid ghostwhite;
+    border-right: 4px solid ghostwhite;
+    animation: code-viewer-spinner .6s linear infinite;
+}
+
+@keyframes code-viewer-spinner {
+    to {transform: rotate(360deg);}
+}
+
+@media (scripting: none) {
+    x-code-viewer::before { content: 'Enable scripting to view ' attr(src) }
+}

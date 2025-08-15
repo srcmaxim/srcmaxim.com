@@ -1,0 +1,13 @@
+{
+  "name": "srcmaxim.com",
+  "short_name": "srcmaxim.com",
+  "icons": [{
+    "src": "/apple-touch-icon.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }],
+  "background_color": "#ffffff",
+  "description": "Maksym Koval Blog",
+  "theme_color": "#ffffff",
+  "display": "fullscreen"
+}

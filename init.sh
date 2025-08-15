@@ -1,0 +1,1 @@
+npm install -g eslint @eslint/js globals

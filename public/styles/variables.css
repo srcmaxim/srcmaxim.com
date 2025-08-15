@@ -1,0 +1,26 @@
+:root {
+    /* https://modernfontstacks.com/
+       geometric humanist font */
+    --font-system: Avenir, Montserrat, Corbel, source-sans-pro, sans-serif;
+    /* monospace code font */
+    --font-system-code: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    --font-system-code-size: 0.8rem;
+
+    --background-color: white;
+
+    --text-color: black;
+    --text-color-mute: hsl(0, 0%, 40%);
+
+    --link-color: darkblue;
+
+    --nav-separator-color: goldenrod;
+    --nav-background-color: hsl(50, 50%, 95%);
+
+    --border-color: black;
+
+    --code-text-color: var(--text-color);
+    --code-text-color-bg: inherit;
+
+    --panel-title-color: black;
+    --panel-title-color-bg: cornsilk;
+}

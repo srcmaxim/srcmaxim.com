@@ -31,7 +31,7 @@ class LatestPosts extends HTMLElement {
                         feedItems.map(item => html`
                             <li class="card">
                                 ${item.image ? html`<img src="${item.image}" aria-hidden="true" loading="lazy" />` : ''}
-                                <h3><a href="${item.link}">${item.title}</a></h3>
+                                <h3><x-preload href="${item.link}">${item.title}</a></h3>
                                 <p>${item.summary}</p>
                                 <small>
                                     <time datetime="${item.published}">

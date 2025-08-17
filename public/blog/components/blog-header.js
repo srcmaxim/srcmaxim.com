@@ -11,8 +11,8 @@ class BlogHeader extends HTMLElement {
             <h1>${title}</h1>
             <nav>
                 <ol>
-                    <li><a href="${import.meta.resolve('../../')}">Blog</a></li>
-                    <li><a href="${import.meta.resolve('../../about/')}">About</a></li>
+                    <li><x-preload href="${import.meta.resolve('../../')}">Blog</a></li>
+                    <li><x-preload href="${import.meta.resolve('../../about/')}">About</a></li>
                     <li>
                         <time datetime="${published}">
                             ${new Date(published).toLocaleDateString('en-US', { dateStyle: 'long' })}

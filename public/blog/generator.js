@@ -202,14 +202,13 @@ customElements.define('blog-generator', class BlogGenerator extends HTMLElement 
         const xml = ATOM_FEED_XML
             .replace('%UPDATED%', toISODate(lastUpdated))
             .replace('%ENTRIES%', this.#articles.slice(0, ATOM_FEED_LENGTH).map(a => {
-                const urlBase = `${BLOG_BASE_URL}${a.slug}`;
-                const url = `${urlBase}/`;
+                const url = `${BLOG_BASE_URL}${a.slug}/`;
                 const media = a.image ? `<media:content url="${new URL(a.image.src, url)}" type="image/${a.image.src.split('.').pop()}" medium="image" />` : '';
                 const author = a.author ? `<author><name><![CDATA[${a.author}]]></name></author>` : '';
                 return `    <entry>
         <title><![CDATA[${a.title}]]></title>
-        <link rel="alternate" type="text/html" href="${urlBase}"/>
-        <id>${urlBase}</id>
+        <link rel="alternate" type="text/html" href="${url}"/>
+        <id>${url}</id>
         <published>${toISODate(a.published)}</published>
         <updated>${toISODate(a.updated || a.published)}</updated>
         <summary><![CDATA[${a.summary}]]></summary>

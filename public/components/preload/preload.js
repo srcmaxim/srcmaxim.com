@@ -8,8 +8,8 @@ class Preload extends HTMLElement {
         `;
         this.style.display = 'contents';
         const anchor = this.querySelector('a');
-        anchor.addEventListener('mouseover', () => this.addLink(anchor.href));
-        anchor.addEventListener('touchstart', () => this.addLink(anchor.href));
+        anchor.addEventListener('mouseover', () => this.addLink(anchor.href), { passive: true });
+        anchor.addEventListener('touchstart', () => this.addLink(anchor.href), { passive: true });
     }
 
     addLink(href) {

@@ -27,10 +27,11 @@ class LatestPosts extends HTMLElement {
                     // sanity check
                     .filter(item => item.link && item.title);
                 if (feedItems.length) {
+                    const lazyLoadAfter = 3;
                     this.innerHTML = '<ul class="cards">' +
-                        feedItems.map(item => html`
+                        feedItems.map((item, index) => html`
                             <li class="card">
-                                ${item.image ? html`<img src="${item.image}" aria-hidden="true" loading="lazy" />` : ''}
+                                ${item.image ? html`<img src="${item.image}" aria-hidden="true" ${index > lazyLoadAfter ? 'loading="lazy"' : ''} />` : ''}
                                 <h3><x-preload href="${item.link}">${item.title}</a></h3>
                                 <p>${item.summary}</p>
                                 <small>

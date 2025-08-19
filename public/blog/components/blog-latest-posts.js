@@ -4,7 +4,6 @@ const pathify = (url) => url && new URL(url).pathname.replace('/blog/', 'blog/')
 
 class LatestPosts extends HTMLElement {
     connectedCallback() {
-        this.textContent = "Loading...";
         // show the most recent items from the RSS feed
         fetch(import.meta.resolve('../feed.xml'))
             .then(response => response.text())

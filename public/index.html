@@ -7,8 +7,16 @@
     <meta name="description" content="Latest Posts">
     <link rel="icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="index.css">
     <link rel="canonical" href="https://srcmaxim.com/index.html">
+    <!-- Prefetch: index.css+core, index.js+core, feed.xml -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="prefetch" href="styles/reset.css">
+    <link rel="prefetch" href="styles/variables.css">
+    <link rel="prefetch" href="styles/global.css">
+    <link rel="prefetch" href="index.js">
+    <link rel="prefetch" href="blog/components/blog-latest-posts.js">
+    <link rel="prefetch" href="blog/feed.xml">
+    <!-- Prefetch: Cloudflare -->
     <link rel="prefetch" href="https://static.cloudflareinsights.com/beacon.min.js">
     <link rel="preconnect" href="https://cloudflareinsights.com">
 </head>
@@ -28,6 +36,7 @@
                 Latest Posts
             </h2>
             <blog-latest-posts>
+                Loading...
                 <noscript>Please enable scripting to view.</noscript>
             </blog-latest-posts>
         </section>

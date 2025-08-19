@@ -3,6 +3,7 @@ html {
     max-width: 800px;
     background-color: var(--background-color);
     color: var(--text-color);
+    scrollbar-gutter: stable both-edges;
 }
 
 body {

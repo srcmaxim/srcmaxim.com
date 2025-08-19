@@ -5,21 +5,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="In my first post I share why I built my blog using Web Standarts instead of frameworks like Hugo. We will touch on setup, development loop, and deployment with Cloudflare Pages.">
-    <!-- Prefetch: index.css+core, index.js+core, image.webp -->
+    <!-- Prefetch: index.css+core, index.js+core -->
     <link rel="stylesheet" href="../index.css">
     <link rel="stylesheet" href="../../styles/reset.css">
     <link rel="stylesheet" href="../../styles/variables.css">
     <link rel="stylesheet" href="../../styles/global.css">
     <link rel="prefetch" href="../index.js">
     <link rel="prefetch" href="../components/blog-header.js">
-    <link rel="prefetch" href="image.webp">
     <!-- Prefetch: Cloudflare -->
     <link rel="prefetch" href="https://static.cloudflareinsights.com/beacon.min.js">
     <link rel="preconnect" href="https://cloudflareinsights.com">
 </head>
 <body>
     <blog-header published="2025-08-14">
-        <img src="image.webp" alt="Cover"/>
+        <picture>
+            <source
+                srcset="image-small.webp"
+                media="(width <= 600px)"/>
+            <img
+                src="image.webp"
+                aria-hidden="true"
+                alt="Cover"/>
+        </picture>
         <h2>Welcome to My Blog</h2>
         <p class="byline" aria-label="author">Maksym Koval</p>
     </blog-header>

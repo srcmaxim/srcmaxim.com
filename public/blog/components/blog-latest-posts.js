@@ -32,14 +32,16 @@ class LatestPosts extends HTMLElement {
                         feedItems.reverse().map((item, index) => html`
                             <li class="card">
                                 ${item.image ? html`
-                                    <img
-                                        srcset="${item.imageSmall} 480w, ${item.image} 2000w"
-                                        sizes="(width <= 600px) 480px, 2000px"
-                                        src="${item.imageSmall}"
-                                        aria-hidden="true"
-                                        alt="${item.title}"
-                                        ${index > lazyLoadAfter ? 'loading="lazy"' : ''}
-                                    />
+                                    <picture>
+                                        <source
+                                            srcset="${item.imageSmall}"
+                                            media="(max-width: 600px)"/>
+                                        <img
+                                            src="${item.image}"
+                                            aria-hidden="true"
+                                            alt="Cover"
+                                            ${index > lazyLoadAfter ? 'loading="lazy"' : ''}
+                                    </picture>
                                 ` : ''}
                                 <h3><x-preload href="${item.link}">${item.title}</a></h3>
                                 <p>${item.summary}</p>

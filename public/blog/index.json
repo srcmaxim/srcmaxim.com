@@ -2,7 +2,7 @@
     {
         "slug": "2025-08-14-first-post",
         "title": "Welcome to My Blog",
-        "summary": "In my first post I share why I built my blog using Web Standarts instead of frameworks like Hugo. We will touch on setup, development loop, and deployment with Cloudflare Pages.",
+        "summary": "Ever wondered why someone would ditch Hugo for plain HTML? In my first post, I share my dev experience with Plain Vanila Web and Cloudflare Pages.",
         "published": "2025-08-14",
         "author": "Maksym Koval"
     }

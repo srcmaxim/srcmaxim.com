@@ -16,43 +16,44 @@
         <id>https://srcmaxim.com/blog/2025-08-14-first-post/</id>
         <published>2025-08-14T12:00:00.000Z</published>
         <updated>2025-08-14T12:00:00.000Z</updated>
-        <summary><![CDATA[In my first post I share why I built my blog using Web Standarts instead of frameworks like Hugo. We will touch on setup, development loop, and deployment with Cloudflare Pages.]]></summary>
+        <summary><![CDATA[Ever wondered why someone would ditch Hugo for plain HTML? In my first post, I share my dev experience with Plain Vanila Web and Cloudflare Pages.]]></summary>
         <media:content url="https://srcmaxim.com/blog/2025-08-14-first-post/image.webp" type="image/webp" medium="image" />
         <author><name><![CDATA[Maksym Koval]]></name></author>
         <content type="html"><![CDATA[
         <p>
-            This is the first post on my website. I made this website to host anything that I want to publish.
-            My number one goal is to write about things that atleast one person somewhere might find useful.
-            Solutions to problems that I have encountered, guides on languages/frameworks or just something cool I want to share.
+            This is the first post on my website. I built this blog to share my thoughts and projects that matter to me.
+            Mainly, I'd like to post about Java, performance engineering, databases, and distributed systems. 
         </p>
         <h3>The website</h3>
         <p>
-            When designing this site I had to decide which framework to use. My prevous webstite was build using <a href="https://gohugo.io/">Hugo</a>.
-            This is the most popular static site generator, so why not use it?
+            My prevous blog was built using <a href="https://gohugo.io/">Hugo</a>.
+            This is a nice static site generator that neetly integrates into modern web development, has nice themes and overall really fast.
+            Also, it’s the most popular static site generator, so why not use it?
         </p>
         <p>
-            A blog is a very simple website. There are no moving parts or live updates, just simple text and images.
-            You don’t even need to update it that often. So why would you need hundreds of configs to render some simple HTML?
-            I’d rather spend my time writing blog posts.
+            A blog is a very simple website. There's no moving parts or live updates, mostly static data.
+            You don't need to update a blog that often. 
         </p>
         <p>
             One alternative that really caught my attention was <a href="https://plainvanillaweb.com/">Plain Vanila Web</a>.
-            It’s not a website generator, it’s just a static website, no dependencies and build steps needed.
+            It’s modern approach to build website with no dependencies and build steps needed.
             And it’s powered by modern web standarts (such as <i>Web Components</i>).
         </p>
         <p>
+            The first thing caught my attention was how fast development loop is.
             For development I use <i>VS Code</i> with <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server">Live Preview</a> plugin.
-            One thing I immediately noticed was how fast development loop is.
-            You can open html in <i>Live Preview</i> and immediately see your changes.
+            Any change I do for the website is immediately visible in <i>Live Preview</i>.
         </p>
         <p>    
-            The build step is integrated in the browser! For the new post I need to go to <a href="../generator.html">/blog/generator.html</a> and generate new <a href="../feed.xml">RSS Atom feed</a> and <a href="../index.json">Blog index</a>.
+            One more thing, the build step is integrated in the browser!
+            For adding new post I need to go to <a href="../generator.html">/blog/generator.html</a> and generate new <a href="../feed.xml">RSS Atom feed</a> and <a href="../index.json">Blog index</a>.
         </p>
         <h3>Deployment</h3>
         <p>
-            Since the website has no build step it’s really easy to do a deployment.
-            I'm using Cloudflare Pages for hosting. Previously my Hugo blog required build step in <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>.
-            Currently the workflow takes ten seconds to build and deploy to the server!
+            Since the website has no build step, it’s really easy to do a deployment.
+            I'm using Cloudflare Pages for hosting.
+            Previously my Hugo blog required build step in <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>.
+            With new approach, the build and deploy steps take 20 seconds!
         </p>
     ]]></content>
     </entry>

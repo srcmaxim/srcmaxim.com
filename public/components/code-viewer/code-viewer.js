@@ -45,7 +45,7 @@ class CodeViewer extends HTMLElement {
             // should we syntax highlight?
             const src = this.getAttribute('src') || '';
             const lang = src.split('.').pop();
-            if (['html', 'js', 'css', 'sql', 'java'].includes(lang)) {
+            if (['html', 'js', 'css', 'sql', 'java', 'cpp'].includes(lang)) {
                 code.className = 'shj-lang-' + lang;
             } else {
                 code.className = 'shj-lang-plain';
